@@ -1,3 +1,6 @@
+__author__ = "NetMalware"
+__license__ = "Apache"
+
 import requests
 
 def check_username_availability(username):
@@ -11,14 +14,14 @@ def check_username_availability(username):
 
 def main():
     while True:
-        username = input("Digite o nome de usuário que deseja verificar (ou 'sair' para sair): ").strip()
+        username = input('''Search the User or type ":quit" to keep up: ''').strip()
         if username.lower() == 'sair':
             break
 
         if check_username_availability(username):
-            print(f"O perfil '{username}' existe no Instagram.")
+            print(f"Ops! That user already exists!")
         else:
-            print(f"O perfil '{username}' não existe ou é privado.")
+            print(f"Private or not exists 7w7")
 
 if __name__ == "__main__":
     main()
